@@ -44,13 +44,10 @@ public class Task32Servlet extends HttpServlet {
 				{
 					request.setAttribute("x1", Double.toString((-b1 + Math.sqrt(d)) / 2 / a1));
 					request.setAttribute("x2", Double.toString((-b1 - Math.sqrt(d)) / 2 / a1));
-					request.setAttribute("mathres", "Корни найдены");
 				} 
 				else 
 				{
-					request.setAttribute("x1", "error");
-					request.setAttribute("x2", "error");
-					request.setAttribute("mathres", "Корней нет");
+					request.setAttribute("norootsmessage", "Корней нет!");
 				}
 
 			}

@@ -10,11 +10,21 @@
 </head>
 <body>
 
-	<b>Корни квадратного уравнения:</b><br>
-	X1 = ${x1},<br>
-	X2 = ${x2}.<br>
-	Результат: ${mathres}!<br><br>
+	<b>Task3.2</b><br>
+	<c:if test="${x1 ne null}">
+		<c:if test="${x2 ne null}">
+			<b>Корни квадратного уравнения:</b><br>
+			X1 = ${x1},<br>
+			X2 = ${x2}.<br>
+		</c:if>
+	</c:if>
+	<c:if test="${norootsmessage ne null}">
+		<b>${norootsmessage}!</b><br>
+	</c:if>
 	
+	<br>
+	
+	<b>Task3.3</b><br>
 	<table>
 		<c:forEach items="${arr}" var="arri" varStatus="varStatus">
 			<tr>
@@ -27,6 +37,7 @@
 	
 	<br>
 	
+	<b>Task3.4</b><br>
 	<table>
 		<c:forEach items="${arr2}" var="arr2i" varStatus="varStatus2">
 			<tr>
