@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Homeworks</servlet-name>
+		<servlet-class>edu.ifmo.HomeworksServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Homeworks</servlet-name>
+		<url-pattern>/homeworks</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>Task2</servlet-name>
+		<servlet-class>homeworks.task2.Task2Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Task2</servlet-name>
+		<url-pattern>/task2servlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Task3</servlet-name>
+		<servlet-class>homeworks.task3.Task3Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Task3</servlet-name>
+		<url-pattern>/task3servlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Task32</servlet-name>
+		<servlet-class>homeworks.task32.Task32Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Task32</servlet-name>
+		<url-pattern>/task32servlet</url-pattern>
+	</servlet-mapping>
+	
+	
+</web-app>
