@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Hello App Engine</title>
+    
+    <script src="/js/jquery-2.1.0.min.js"></script>
+    <script>
+    	$( function() {
+    		$('#iscorrect').click( function() {
+    	    	var email = $("#email").val();
+    	    	var password = $("#password").val();
+    	    	
+    			$('#iscorrecttext').load("/task6servlet?email="+email+"&password="+password);
+    		} );
+    	    
+    	  } );
+    </script>
+  </head>
+
+  <body>
+  
+  <form>
+		<p>Введите данные:</p>
+		E-mail: <input id="email" type="text" /> <br>
+		Пароль: <input id="password" type="text" /> <br>
+
+	</form>
+	<p>После нажатия на кнопку будет произведена проверка корректности e-mail'a и проверка надежности пароля</p>
+	<button id="iscorrect">Проверить</button>
+	<span style="color:red" id="iscorrecttext"></span><br><hr> 
+
+  </body>
+</html>
