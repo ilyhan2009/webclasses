@@ -24,9 +24,9 @@ public class EmailProcessor {
 		
 		boolean valid = this.validate(s);
 		if (valid)
-			throw new CorrectEmailException("<br>e-mail корректен");
+			throw new CorrectEmailException("<div class=\"alert alert-success\" role=\"alert\">e-mail корректен</div>");
 		else
-			throw new CorrectEmailException("<br>e-mail НЕ корректен");
+			throw new CorrectEmailException("<div class=\"alert alert-danger\" role=\"alert\">e-mail НЕ корректен</div>");
 
 	
 	//Проверить введенные данные как делали на паре с формой, но только с исключениями. Проверка емаил, сложности пароля, числа, и другие..

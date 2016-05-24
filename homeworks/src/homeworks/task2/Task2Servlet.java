@@ -7,11 +7,11 @@ import javax.servlet.http.*;
 public class Task2Servlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-		resp.setContentType("text/plain");
+		resp.setContentType("text/plain; charset=utf-8");
 		
 		if ((req.getParameter("var1")==null)&&(req.getParameter("var2")==null)&&(req.getParameter("operation")==null))
 		{
-			resp.getWriter().println("Hello, world");
+			resp.getWriter().println("<div class=\"alert alert-success\" role=\"alert\">Отлично, кнопка работает!</div>");
 		}
 	
 		

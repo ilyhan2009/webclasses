@@ -1,38 +1,247 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
-<!-- above set at the top of the file will set     -->
-<!-- the browser's rendering engine into           -->
-<!-- "Quirks Mode". Replacing this declaration     -->
-<!-- with a "Standards Mode" doctype is supported, -->
-<!-- but may lead to some differences in layout.   -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="/favicon.png">
 
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Hello Page</title>
- 
-  </head>
-  
-  
+<title>Илья Пехов - Главная</title>
 
-  
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
 
-  <body>
-    
-	<table>
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Available Web-tasks:</td>        
-      </tr>
-      <tr>
-        <td><a href="/task2.html">Task2</a></td>
-        <td><a href="/task3.html">Task3</a></td>
-        <td><a href="/task32.html">Task3.2-3.4</a></td>
-        <td><a href="/task6.html">Task6</a></td>
-      </tr>
-    </table>
-    <br>
-    <div>P.S. Task1 is not Web-focused, therefore you can "Run" it only as "Java App".</div>
-    <div>P.P.S. Task3.2-3.4 consists of Task 3.2, Task 3.3 and Task 3.4.</div>
-    <div>P.P.P.S. I used JSTL in Task3.2-3.4, therefore result-page (show.jsp) and error-page (error.jsp) located in "WEB-INF/jsp"</div>
-  </body>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="../../assets/css/ie10-viewport-bug-workaround.css"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="/css/sticky-footer-navbar.css" rel="stylesheet">
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<link rel="stylesheet" href="/css/myownstyle.css" type="text/css">
+<link rel="stylesheet" href="/scrollup/scrollup.css" type="text/css">
+</head>
+
+<body>
+
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">Илья Пехов</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="/">Главная</a></li>
+					<li><a href="/task0.html">Зад. 0</a></li>
+					<li><a href="/task2.html">Зад. 2</a></li>
+					<li><a href="/task3.html">Зад. 3.1</a></li>
+					<li><a href="/task32.html">Зад. 3.2-3.4</a></li>
+					<li><a href="/task6.html">Зад. 6</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Begin page content -->
+	<div class="container">
+		<div class="page-header">
+			<h1>Илья Пехов</h1>
+			<p class="lead">Студент группы P3355 (2015-2016г)</p>
+		</div>
+
+		<h4>
+		В течении 6 семестра в рамках дисциплины Web-программирование мною были выполнены следующие домашние работы:
+		</h4>
+		<div class="panel-group" id="collapse-group">
+		
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#collapse-group" href="#el1">Задание №0. Google-карта [Web]</a>
+					</h4>
+				</div>
+				<div id="el1" class="panel-collapse collapse">
+					<div class="panel-body">Реализовать Google-карту на странице</div>
+ 				</div>
+ 			</div>
+ 			
+ 			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#collapse-group" href="#el2">Задание №1. Простейшие типы данных Java [Console]</a>
+					</h4>
+				</div>
+				<div id="el2" class="panel-collapse collapse">
+					<div class="panel-body">Вывод примеров работы с простейшими типами данных в консоль.</div>
+ 				</div>
+ 			</div>
+ 			
+ 			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#collapse-group" href="#el3">Задание №2. Get-запросы. Калькулятор [Web]</a>
+					</h4>
+				</div>
+				<div id="el3" class="panel-collapse collapse">
+					<div class="panel-body">С помощью JS при нажатии на любую из кнопок отправляется GET-запрос на сервлет (наборы GET-параметров для кнопок разные). Сервлет вычисляет выражение или просто выводит текст в зависимости от принятых GET-параметров.</div>
+ 				</div>
+ 			</div>
+ 			
+ 			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#collapse-group" href="#el4">Задание №3.1. Какое число ближе к 10? [Web]</a>
+					</h4>
+				</div>
+				<div id="el4" class="panel-collapse collapse">
+					<div class="panel-body">Необходимо создать форму на веб-странице, в которую вводятся два числа m и n. Далее вывести ближайшее к 10. Например, среди чисел 8,5 и 11,45 ближайшее к десяти 11,45. После этого вывести примеры работы с разными типами данных Java из консольного примера.</div>
+ 				</div>
+ 			</div>
+ 			
+ 			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#collapse-group" href="#el5">Задание №3.2-3.4. Квадратное уравнение. Массивы [Web]</a>
+					</h4>
+				</div>
+				<div id="el5" class="panel-collapse collapse">
+					<div class="panel-body">
+					<p>3.2. Создать форму для ввода трех целых чисел a,b,c для формулы ax²+bx+c=0. Выведите корни уравнения, либо сообщите, что корней нет.</p>
+					<p>3.3. Создать двумерный массив из 8 строк по 5 столбцов в каждой из случайных целых чисел из отрезка [10;99]. Вывести массив на веб-страницу.</p>
+					<p>3.4. Создать двумерный массив из 5 строк по 8 столбцов в каждой из случайных целых чисел из отрезка [-99;99]. Вывести массив на веб-страницу. После этого на отдельной строке вывести на экран значение максимального элемента этого массива (его индекс не имеет значения).</p>
+					
+					</div>
+ 				</div>
+ 			</div>
+ 			
+ 			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#collapse-group" href="#el6">Задание №4. Консольное приложение с аргументами [Console]</a>
+					</h4>
+				</div>
+				<div id="el6" class="panel-collapse collapse">
+					<div class="panel-body">Консольное приложение, выводящее разную информацию в зависимости от принятых аргументов.</div>
+ 				</div>
+ 			</div>
+ 			
+ 			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#collapse-group" href="#el7">Задание №5. Взаимодействие классов [Console]</a>
+					</h4>
+				</div>
+				<div id="el7" class="panel-collapse collapse">
+					<div class="panel-body">
+						<p>Создать иерархию классов и продумать их какое-то взаимодействие.</p>
+						<br>
+						<p>Мною были созданы 2 класса: полицейский и водитель.</p>
+						<br>
+						<p>Атрибуты водителя:</p>
+						<ul>
+							<li>Имя,</li>
+							<li>Связи или блат [да\нет],</li>
+							<li>Деньги,</li>
+							<li>Тонировка [0..100],</li>
+							<li>Аптечка,</li>
+							<li>Штраф [да\нет].</li>
+						</ul>
+						<br>
+						<p>Методы водителя:</p>
+						<ul>
+							<li>Задать имя,</li>
+							<li>Задать наличие связей,</li>
+							<li>Добавить денег,</li>
+							<li>Установить уровень тонировки,</li>
+							<li>Задать наличие аптечки,</li>
+							<li>Получить сводную информацию о данном водителе.</li>
+						</ul>
+						<br>
+						<p>Атрибуты полицейского:</p>
+						<ul>
+							<li>Имя,</li>
+							<li>Количество денег, которое необходимо "заработать" (на новый TV),</li>
+							<li>Уволенность [да\нет].</li>
+						</ul>
+						<br>
+						<p>Методы полицейского:</p>
+						<ul>
+							<li>Задать имя,</li>
+							<li>Задать количество денег, которое необходимо "заработать",</li>
+							<li>Проверить, достаточно ли уже "заработано" денег,</li>
+							<li>Получить сводную информацию о данном полицейском,</li>
+							<li>Остановить водителя (принимает водителя). Если водитель имеет "связи", то полицейский уволен. В противном случае полицеский проверяет наличие аптечки. Если она отсутствует, то следует попытка получить "взятку". Если необходимого кол-ва денег у водителя нет, то он получает штраф. Далее следует аналогичная процедура проверки тонировки. Данный метод возможно улучшить.</li>
+						</ul>
+						
+					</div>
+ 				</div>
+ 			</div>
+ 			
+ 			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#collapse-group" href="#el8">Задание №6. Web-форма. Отбрасывание исключения [Web]</a>
+					</h4>
+				</div>
+				<div id="el8" class="panel-collapse collapse">
+					<div class="panel-body">C помощью get-запроса на сервлет проверяем корректность email'a и надежность пароля.</div>
+ 				</div>
+ 			</div>
+ 			
+ 		</div>
+
+
+
+
+		<p id="back-top">
+			<a href=""><span></span>Наверх</a>
+		</p>
+	</div>
+	<!-- content ends -->
+
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">Илья Пехов © 2016</p>
+		</div>
+	</footer>
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script type="text/javascript" src="/js/jquery-1.4.4.js"></script>
+	<script type="text/javascript" src="/qb/js/qb.js"></script>
+	<script type="text/javascript" src="/scrollup/scrollup.js"></script>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<script>
+		window.jQuery
+				|| document
+						.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+	</script>
+	<script src="../js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
 </html>

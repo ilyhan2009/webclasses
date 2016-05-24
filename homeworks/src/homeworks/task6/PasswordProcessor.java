@@ -51,8 +51,8 @@ public class PasswordProcessor {
 		
 		boolean valid = this.validate(s);
 		if (valid)
-			throw new CorrectPasswordException("<br>Пароль корректен");
+			throw new CorrectPasswordException("<div class=\"alert alert-success\" role=\"alert\">Пароль корректен</div>");
 		else
-			throw new CorrectPasswordException("<br>Пароль НЕ корректен");
+			throw new CorrectPasswordException("<div class=\"alert alert-danger\" role=\"alert\">Пароль НЕ корректен</div>");
 	}
 }

@@ -19,15 +19,14 @@ public class Task3Servlet extends HttpServlet
 			float n1 = Float.parseFloat(n);
 			
 			if (Math.abs(m1-10)<Math.abs(n1-10))
-				resp.getWriter().println("\"m\" ближе к 10 на "+(Math.abs(n1-10)-Math.abs(m1-10)));
+				resp.getWriter().println("<div class=\"alert alert-success\" role=\"alert\">\"m\" ближе к 10 на "+(Math.abs(n1-10)-Math.abs(m1-10))+"</div>");
 			else
 				if (Math.abs(m1-10)>Math.abs(n1-10))
-					resp.getWriter().println("\"n\" ближе к 10 на "+(Math.abs(m1-10)-Math.abs(n1-10)));
+					resp.getWriter().println("<div class=\"alert alert-success\" role=\"alert\">\"n\" ближе к 10 на "+(Math.abs(m1-10)-Math.abs(n1-10))+"</div>");
 				else
 					if (m1 == n1)
-						resp.getWriter().println("Никто, т.к. \"m\" = \"n\"");
-			
-			
+						resp.getWriter().println("<div class=\"alert alert-success\" role=\"alert\">Никто, т.к. \"m\" = \"n\"</div>");
+
 				
 		}
 
