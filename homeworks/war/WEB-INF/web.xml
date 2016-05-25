@@ -53,5 +53,23 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/task6servlet</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>Task7</servlet-name>
+		<servlet-class>homeworks.task7.Task7Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Task7</servlet-name>
+		<url-pattern>/task7servlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Task7Hospitals</servlet-name>
+		<servlet-class>homeworks.task7.Task7Hospitals</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Task7Hospitals</servlet-name>
+		<url-pattern>/task7hospitals</url-pattern>
+	</servlet-mapping>
+	
 	
 </web-app>

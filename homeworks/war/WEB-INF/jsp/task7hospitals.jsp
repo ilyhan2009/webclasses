@@ -14,7 +14,7 @@
 <meta name="author" content="">
 <link rel="icon" href="/favicon.png">
 
-<title>Задания №3.2-3.4. Квадратное уравнение. Массивы</title>
+<title>Задание №7. Работа с CSV и открытыми данными</title>
 
 <!-- Bootstrap core CSS -->
 <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -64,8 +64,9 @@
 					<li><a href="/task0.html">Зад. 0</a></li>
 					<li><a href="/task2.html">Зад. 2</a></li>
 					<li><a href="/task3.html">Зад. 3.1</a></li>
-					<li class="active"><a href="/task32.html">Зад. 3.2-3.4</a></li>
+					<li><a href="/task32.html">Зад. 3.2-3.4</a></li>
 					<li><a href="/task6.html">Зад. 6</a></li>
+					<li class="active"><a href="/task7servlet">Зад. 7</a></li>
 				</ul>
 			</div>
 		</div>
@@ -75,50 +76,40 @@
 	<div class="container">
 		
 		<div class="page-header">
-			<h1>Задания №3.2-3.4. Квадратное уравнение. Массивы</h1>
-			<p class="lead">C помощью post-запроса на сервлет решаем уравнение. Работаем с массивами. Вывод на jsp</p>
+			<h1>Задание №7. Работа с CSV и открытыми данными</h1>
+			<p class="lead">Связать как минимум 2 CSV-таблицы из Государственной информационной системы Санкт-Петербурга «Открытые данные Санкт-Петербурга» и произвести их обработку.</p>
 		</div>
-				
 		
-		<b>Задание №3.2</b><br>
-		<c:if test="${x1 ne null}">
-			<c:if test="${x2 ne null}">
-				<b>Корни квадратного уравнения:</b><br>
-				<div class="alert alert-success" role="alert">X1 = ${x1},	X2 = ${x2}</div>
-			</c:if>
+
+ 			
+ 			
+ 		<c:if test="${HospitalsList ne null}">
+ 			
+ 			<h4>Лечебно-профилактические учреждения ${districtName} района Санкт-Петербурга:</h4>
+ 				
+ 			<div class="panel-group" id="collapse-group">
+ 				
+ 				<c:forEach items="${requestScope.HospitalsList}" var="item" varStatus="varStatus">
+ 					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#collapse-group" href="#el${item.id}">${item.name}</a>
+							</h4>
+						</div>
+						<div id="el${item.id}" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p><b>${titleHospital.address}:</b> ${item.address}</p>
+								<p><b>${titleHospital.chief}:</b> ${item.chief}</p>
+								<p><b>${titleHospital.phone}:</b> ${item.phone}</p>
+								<p><b>${titleHospital.fax}:</b> ${item.fax}</p>
+								<p><b>${titleHospital.opentime}:</b> ${item.opentime}</p>
+							</div>
+ 						</div>
+ 					</div>
+ 				</c:forEach>
+ 			
+ 			</div>
 		</c:if>
-		<c:if test="${norootsmessage ne null}">
-			<div class="alert alert-danger" role="alert">${norootsmessage}</div>
-		</c:if>
-	
-		<br>
-	
-		<b>Задание №3.3</b><br>
-		<table class="table table-condensed">
-			<c:forEach items="${arr}" var="arri" varStatus="varStatus">
-				<tr>
-				<c:forEach items="${arri}" var="elem" varStatus="varStatus1">
-					<td>${elem}<span style="color:#bbb">[${varStatus.index}][${varStatus1.index}]</span></td>
-				</c:forEach>
-				</tr>
-			</c:forEach>
-		</table>
-		
-		<br>
-		
-		<b>Задание №3.4</b><br>
-		<table class="table table-condensed">
-			<c:forEach items="${arr2}" var="arr2i" varStatus="varStatus2">
-				<tr>
-				<c:forEach items="${arr2i}" var="elem2" varStatus="varStatus3">
-					<td>${elem2}<span style="color:#bbb">[${varStatus2.index}][${varStatus3.index}]</span></td>
-				</c:forEach>
-				</tr>
-			</c:forEach>
-		</table>
-		<div class="alert alert-info" role="alert">Максимальное число во втором массиве: ${max}</div>
-	
-	
 		
 		
 		<p id="back-top">

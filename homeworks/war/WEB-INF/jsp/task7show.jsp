@@ -14,7 +14,7 @@
 <meta name="author" content="">
 <link rel="icon" href="/favicon.png">
 
-<title>Страница ошибки</title>
+<title>Задание №7. Работа с CSV и открытыми данными</title>
 
 <!-- Bootstrap core CSS -->
 <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -66,7 +66,7 @@
 					<li><a href="/task3.html">Зад. 3.1</a></li>
 					<li><a href="/task32.html">Зад. 3.2-3.4</a></li>
 					<li><a href="/task6.html">Зад. 6</a></li>
-					<li><a href="/task7servlet">Зад. 7</a></li>
+					<li class="active"><a href="/task7servlet">Зад. 7</a></li>
 				</ul>
 			</div>
 		</div>
@@ -76,14 +76,44 @@
 	<div class="container">
 		
 		<div class="page-header">
-			<h1>Страница ошибки</h1>
-			<p class="lead">Что-то пошло не так..</p>
+			<h1>Задание №7. Работа с CSV и открытыми данными</h1>
+			<p class="lead">Связать как минимум 2 CSV-таблицы из Государственной информационной системы Санкт-Петербурга «Открытые данные Санкт-Петербурга» и произвести их обработку.</p>
 		</div>
-				
 		
-		<div class="alert alert-danger" role="alert">Ошибка! ${errortext}</div>
-	
-	
+
+ 			
+ 			
+ 		<c:if test="${AdministrationsList ne null}">
+ 			
+ 			<h4>Районы Санкт-Петербурга и их администрации:</h4>
+ 				
+ 			<div class="panel-group" id="collapse-group">
+ 				
+ 				<c:forEach items="${requestScope.AdministrationsList}" var="item" varStatus="varStatus">
+ 					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#collapse-group" href="#el${item.id}">${item.name}</a>
+							</h4>
+						</div>
+						<div id="el${item.id}" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p><b>${titleAdmin.address}:</b> ${item.address}</p>
+								<p><b>${titleAdmin.chief}:</b> ${item.chief}</p>
+								<p><b>${titleAdmin.phone}:</b> ${item.phone}</p>
+								<p><b>${titleAdmin.fax}:</b> ${item.fax}</p>
+								<p><b>${titleAdmin.email}:</b> ${item.email}</p>
+								<p><a href="${item.site}">${titleAdmin.site}</a></p>
+								<p><b>${titleAdmin.inn}:</b> ${item.inn}</p>
+								<p><b>${titleAdmin.meetingtime}:</b> ${item.meetingtime}</p>
+								<p><a href="/task7hospitals?district=${item.district}">Лечебно-профилактические учреждения района</a></p>
+							</div>
+ 						</div>
+ 					</div>
+ 				</c:forEach>
+ 			
+ 			</div>
+		</c:if>
 		
 		
 		<p id="back-top">

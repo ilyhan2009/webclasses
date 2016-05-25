@@ -96,7 +96,7 @@ public class Task32Servlet extends HttpServlet {
 		request.setAttribute("arr2", arr2);
 		request.setAttribute("max", max);
 		
-		request.getRequestDispatcher("/WEB-INF/jsp/show.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/jsp/task32show.jsp").forward(request, response);
 		return;
 	}
 }
