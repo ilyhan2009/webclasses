@@ -96,9 +96,16 @@ public class Task7Hospitals extends HttpServlet {
 			}
 			reader.close();
 			
-			request.setAttribute("HospitalsList", HospitalsList);
-			
-			request.getRequestDispatcher("/WEB-INF/jsp/task7hospitals.jsp").forward(request, response);
+			if (HospitalsList.size()==0)
+			{
+				request.setAttribute("errortext", "Совпадений не найдено!");
+				request.getRequestDispatcher("/WEB-INF/jsp/error.jsp").forward(request, response);
+			}
+			else
+			{
+				request.setAttribute("HospitalsList", HospitalsList);
+				request.getRequestDispatcher("/WEB-INF/jsp/task7hospitals.jsp").forward(request, response);
+			}
 		}
 		else
 		{
