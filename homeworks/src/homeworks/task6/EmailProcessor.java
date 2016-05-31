@@ -23,9 +23,7 @@ public class EmailProcessor {
 	public void parse(String s) throws CorrectEmailException {
 		
 		boolean valid = this.validate(s);
-		if (valid)
-			throw new CorrectEmailException("<div class=\"alert alert-success\" role=\"alert\">e-mail корректен</div>");
-		else
+		if (!valid)
 			throw new CorrectEmailException("<div class=\"alert alert-danger\" role=\"alert\">e-mail НЕ корректен</div>");
 
 	

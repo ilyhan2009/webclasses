@@ -34,6 +34,7 @@ public class Task6Servlet extends HttpServlet {
 		try {
 			EmailProcessor emailProcessor = new EmailProcessor();
 			emailProcessor.parse(email);
+			resp.getWriter().println("<div class=\"alert alert-success\" role=\"alert\">e-mail корректен</div>");
 		}
 		
 		catch (CorrectEmailException e) {
@@ -45,6 +46,7 @@ public class Task6Servlet extends HttpServlet {
 		try {
 			PasswordProcessor passwordProcessor = new PasswordProcessor();
 			passwordProcessor.parse(password);
+			resp.getWriter().println("<div class=\"alert alert-success\" role=\"alert\">Пароль корректен</div>");
 		}
 		
 		catch (CorrectPasswordException e) {
